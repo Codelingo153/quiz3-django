@@ -1,0 +1,215 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #454049;
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(111, 83, 140, 0.14) 0,
+            rgba(111, 83, 140, 0.14) 120px,
+            transparent 122px
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(143, 116, 166, 0.16) 0,
+            rgba(143, 116, 166, 0.16) 160px,
+            transparent 162px
+        ),
+        linear-gradient(
+            135deg,
+            #C9BFD6,
+            #D9D0E2,
+            #BEB0CE
+        );
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-card {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: #E5DCEB;
+    border: 1px solid rgba(115, 103, 117, 0.25);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(69, 64, 73, 0.16);
+}
+
+.page-header {
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #454049;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    margin: 0 0 12px;
+}
+
+.student-count {
+    font-size: 15px;
+    font-weight: bold;
+    color: #65566D;
+    margin: 0;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 14px;
+    background-color: #F1EAF5;
+    border: 1px solid #D2C4DC;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #F1EAF5;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #736775;
+    color: #FFFFFF;
+    padding: 17px 14px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+td {
+    padding: 15px 14px;
+    text-align: left;
+    font-size: 14px;
+    color: #454049;
+    border-bottom: 1px solid #D9CDDF;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #F1EAF5;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #F1EAF5;
+}
+
+tbody tr:hover {
+    background-color: #D7C7E3;
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td:nth-child(6) {
+    overflow-wrap: anywhere;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 24px;
+    color: #736775;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .main-card {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    th,
+    td {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+
+    .student-count {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .main-card {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .page-header {
+        margin-bottom: 18px;
+    }
+
+    .table-container {
+        border-radius: 10px;
+    }
+
+    th,
+    td {
+        padding: 10px 8px;
+        font-size: 11px;
+    }
+}
+
+
+.page-footer {
+    text-align: center;
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid #CBBBD5;
+    line-height: 1.6;
+}
+
+.page-footer p {
+    margin: 4px 0;
+}
+
+.footer-year {
+    font-size: 13px;
+    color: #736775;
+    font-weight: 600;
+}
+
+.footer-year span {
+    color: #A18DAF;
+    margin: 0 5px;
+}
+
+.footer-author {
+    font-size: 14px;
+    color: #454049;
+    font-weight: 500;
+}
+
+.footer-author span {
+    color: #8D789B;
+    margin: 0 3px;
+}
+

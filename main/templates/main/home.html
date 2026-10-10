@@ -1,0 +1,63 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+<body>
+
+    <div class="main-card">
+        <div class="page-header">
+            <h1>Student List</h1>
+            <p class="student-count">
+                Total Students: {{ student_count }}
+            </p>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Course</th>
+                        <th>Section</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student.StudentID }}</td>
+                        <td>{{ student.Name }}</td>
+                        <td>{{ student.Age }}</td>
+                        <td>{{ student.Course }}</td>
+                        <td>{{ student.Section }}</td>
+                        <td>{{ student.Email }}</td>
+                        <td>{{ student.Phone_Number }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="7" class="empty-message">
+                            No students found.
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+            <footer class="page-footer">
+                <p class="footer-year">2026 <span>│</span> Built with Django</p>
+                <p class="footer-author">Joshua A. Antioquia <span>—</span> BSIT 3C</p>
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>
